@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>TODOLIST</h2>
     <ul>
-        <% todos.forEach((todo,id) => { %>
-        <li><%= todo.name %> <a href="/supprimer/<%= todo.id %>">Supprimer</a>   <a href="/modifier/<%= todo.id %>">Modifier</a></li>
-        <% }) %>
+      <% todos.forEach((todo,id) => { %>
+      <li>
+        <%= todo.name %> <a href="/supprimer/<%= todo.id %>">Supprimer</a>
+        <a href="/modifier/<%= todo.id %>">Modifier</a>
+      </li>
+      <% }) %>
     </ul>
 
-
     <h2>AJOUTER UNE NOUVELLE TACHE</h2>
-    <form action='/ajouter' method='POST'>
-        <label for='item'>Ajouter un element</label>
-        <input type='text' name='item'>
-        <button type='submit'>Ajouter</button>
+    <form action="/ajouter" method="POST">
+      <label for="item">Ajouter un element</label>
+      <input type="text" name="item" />
+      <button type="submit">Ajouter</button>
     </form>
-</body>
+  </body>
 </html>
