@@ -1,6 +1,6 @@
 const uuid = require("uuid/v4");
 
-const Todo = require("../models/todo");
+const Todo = require("../models/todoModel");
 
 module.exports = {
   afficherLesTaches: async () => {

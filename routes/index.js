@@ -1,7 +1,7 @@
 const express = require("express");
 
 const router = express.Router();
-const todolistController = require("../controllers/todolist");
+const todolistController = require("../controllers/todolistController");
 
 // on crée une fonction qui répond aux requetes GET pointant sur la racine du site (/)
 router.get("/", async (request, response) => {

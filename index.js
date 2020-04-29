@@ -10,17 +10,16 @@ const uuid = require("uuid/v4");
 const routes = require("./routes");
 
 // on importe le module de base de données
-const db = require("./db");
-// on importe un model de Todo
-const todo = require("./models/todo");
+const db = require("./database/config/db");
 
-// on se connecte à la base de donnée meldb
+// on se connecte à la base de donnée
 db.sync();
 
 // on instancie un server Express
 const app = express();
 
 app.engine("ejs", ejs.renderFile);
+
 //écrire cette ligne pour utiliser le bodyparser et récupérer les données
 app.use(bodyParser.urlencoded({ extended: false }));
 
